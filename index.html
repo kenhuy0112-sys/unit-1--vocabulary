@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#123b63">
+<title>Tiếng Anh 10 – Unit 1: Family Life</title>
+<style>
+:root{--navy:#123b63;--blue:#1769aa;--sky:#e8f4ff;--yellow:#ffd166;--ink:#142536;--muted:#43566b;--green:#146c43;--red:#a32626;--white:#fff}
+*{box-sizing:border-box}
+body{margin:0;background:#f2f7fc;color:var(--ink);font-family:Arial,Helvetica,sans-serif;font-size:18px;line-height:1.55}
+header{background:linear-gradient(120deg,#123b63,#1769aa);color:white;padding:24px 16px;text-align:center}
+header h1{font-size:clamp(25px,5vw,36px);margin:0 0 6px}
+header p{margin:0;font-size:18px}
+main{max-width:980px;margin:0 auto;padding:18px 14px 40px}
+.progress{display:flex;gap:8px;margin:8px 0 20px}
+.progress span{height:8px;background:#c7d8e8;border-radius:10px;flex:1}
+.progress span.active{background:#f0ae24}
+section.panel{background:white;border:2px solid #d7e5f2;border-radius:18px;padding:20px;margin:18px 0;box-shadow:0 5px 18px #123b6310}
+h2{font-size:25px;color:var(--navy);margin:0 0 8px}
+.lead{color:var(--muted);margin:0 0 16px}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(145px,1fr));gap:12px}
+.word-card{border:2px solid #c6dced;border-radius:16px;background:#f8fcff;padding:14px 10px;min-height:170px;cursor:pointer;color:var(--ink);font:inherit;text-align:center;transition:.18s}
+.word-card:hover,.word-card:focus{border-color:var(--blue);background:var(--sky);transform:translateY(-2px);outline:3px solid #1769aa33}
+.art{height:82px;display:grid;place-items:center;font-size:58px;background:#e7f3ff;border-radius:12px;margin-bottom:8px}
+.word-card strong{display:block;font-size:18px}
+.word-card small{display:block;color:var(--muted);font-size:16px}
+.reveal{margin-top:16px;padding:16px;border-radius:14px;background:#eaf5ff;border-left:6px solid var(--blue);min-height:100px}
+.reveal h3{margin:0;color:var(--navy);font-size:24px}
+.reveal p{margin:5px 0}
+button.action{background:var(--blue);color:white;border:0;border-radius:12px;padding:12px 18px;font:inherit;font-weight:bold;cursor:pointer}
+button.action:hover{background:var(--navy)}
+button.action:focus{outline:3px solid #f0ae24;outline-offset:2px}
+.quiz-item{border:1px solid #d3e0eb;border-radius:14px;padding:14px;margin:14px 0}
+.quiz-item h3{font-size:19px;margin:0 0 10px}
+.options{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.option{background:#f5f9fd;border:2px solid #d3e0eb;border-radius:10px;padding:10px;text-align:left;font:inherit;font-size:17px;cursor:pointer;color:var(--ink)}
+.option:hover{border-color:var(--blue)}
+.option:disabled{cursor:default;opacity:1}
+.option.correct{background:#e6f5ec;border-color:#218653;color:#104d30}
+.option.wrong{background:#fff0ef;border-color:#bd3932;color:#7e1e1a}
+.feedback{font-size:17px;margin:10px 0 0;font-weight:bold}
+.feedback.good{color:var(--green)}.feedback.bad{color:var(--red)}
+table{width:100%;border-collapse:collapse;margin-top:12px}
+th,td{border:1px solid #c6d7e5;padding:11px;text-align:left;font-size:17px}
+th{background:#dceeff;color:#123b63}
+tr:nth-child(even) td{background:#f7fbff}
+footer{text-align:center;color:var(--muted);font-size:16px;padding:16px}
+@media(max-width:560px){body{font-size:17px}section.panel{padding:15px}.options{grid-template-columns:1fr}.cards{grid-template-columns:repeat(2,minmax(0,1fr))}th,td{padding:8px;font-size:16px}.table-wrap{overflow-x:auto}}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+<header>
+  <h1>UNIT 1 – FAMILY LIFE</h1>
+  <p>Tiếng Anh 10 · Học từ vựng qua hình ảnh và trò chơi</p>
+</header>
+<main>
+  <div class="progress" aria-label="Tiến trình bài học">
+    <span class="active"></span><span></span><span></span><span></span>
+  </div>
+
+  <section class="panel" id="warmup">
+    <h2>1. Khởi động – Nhìn hình, đoán từ</h2>
+    <p class="lead">Em hãy quan sát 5 hình minh hoạ. Bấm vào từng hình để khám phá từ vựng, phiên âm và nghe phát âm tiếng Anh giọng UK.</p>
+    <div class="cards" id="wordCards"></div>
+    <div class="reveal" id="reveal" aria-live="polite">
+      <p>👆 Chọn một hình ảnh phía trên để bắt đầu khám phá nhé!</p>
+    </div>
+    <p style="font-size:16px;color:#43566b">Lưu ý: Âm thanh sử dụng giọng English (UK) nếu trình duyệt và thiết bị có hỗ trợ. Nếu chưa nghe thấy, hãy thử chạm nút nghe lại.</p>
+  </section>
+
+  <section class="panel" id="practice">
+    <h2>2. Luyện tập – Chọn nghĩa đúng</h2>
+    <p class="lead">Chọn nghĩa tiếng Việt phù hợp nhất với mỗi từ. Em sẽ nhận phản hồi và giải thích ngay sau khi chọn.</p>
+    <div id="quiz"></div>
+    <p id="score" aria-live="polite"><strong>Kết quả:</strong> 0/5 câu</p>
+    <button class="action" id="resetQuiz" type="button">Làm lại bài tập</button>
+  </section>
+
+  <section class="panel" id="summary">
+    <h2>3. Tổng kết – Từ vựng cần ghi nhớ</h2>
+    <p class="lead">Đọc lại từ, phiên âm và nghĩa. Em có thể bấm nút loa để luyện nghe thêm.</p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Từ / Cụm từ</th><th>Phiên âm (UK)</th><th>Nghĩa tiếng Việt</th><th>Nghe</th></tr></thead>
+        <tbody id="summaryRows"></tbody>
+      </table>
+    </div>
+  </section>
+</main>
+<footer>Bài học tương tác · Không yêu cầu đăng nhập · Không thu thập hay gửi dữ liệu học sinh</footer>
+<script>
+const vocabulary = [
+ {word:"breadwinner",ipa:"/ˈbredˌwɪn.ər/",meaning:"người trụ cột / người kiếm tiền chính trong gia đình",icon:"💼",scene:"Một người đi làm, mang thu nhập về cho gia đình.",choices:["người trụ cột gia đình","việc nhà","người nội trợ","giặt quần áo"],correct:0,explain:"Breadwinner là người kiếm phần lớn thu nhập để chu cấp cho gia đình."},
+ {word:"homemaker",ipa:"/ˈhəʊmˌmeɪ.kər/",meaning:"người nội trợ",icon:"🏡",scene:"Một người chăm sóc nhà cửa và các thành viên trong gia đình.",choices:["người trụ cột gia đình","người nội trợ","bày bàn ăn","giặt quần áo"],correct:1,explain:"Homemaker là người quản lý công việc gia đình và chăm sóc nhà cửa; không nhất thiết phải đi làm bên ngoài."},
+ {word:"household chore",ipa:"/ˈhaʊs.həʊld tʃɔːr/",meaning:"việc nhà / công việc gia đình",icon:"🧹",scene:"Những công việc như quét nhà, rửa bát và dọn dẹp.",choices:["bữa ăn gia đình","người nội trợ","việc nhà","người trụ cột"],correct:2,explain:"Household chore chỉ một công việc cần làm trong nhà, ví dụ cleaning hoặc washing dishes."},
+ {word:"do the laundry",ipa:"/duː ðə ˈlɔːn.dri/",meaning:"giặt quần áo",icon:"🧺",scene:"Quần áo được cho vào máy giặt để làm sạch.",choices:["nấu bữa tối","dọn phòng","bày bàn ăn","giặt quần áo"],correct:3,explain:"Do the laundry là cụm động từ có nghĩa là giặt quần áo (giặt và xử lý quần áo bẩn)."},
+ {word:"make the table",ipa:"/meɪk ðə ˈteɪ.bəl/",meaning:"bày bàn ăn / chuẩn bị bàn ăn",icon:"🍽️",scene:"Đặt bát, đĩa, thìa và đũa lên bàn trước bữa ăn.",choices:["bày bàn ăn","giặt quần áo","quét nhà","đi chợ"],correct:0,explain:"Make the table có nghĩa là chuẩn bị, bày biện bàn ăn trước bữa ăn. (Cũng thường gặp cách nói set the table.)"}
+];
+const cards = document.getElementById("wordCards");
+const reveal = document.getElementById("reveal");
+function speak(text){
+ if(!("speechSynthesis" in window)){alert("Trình duyệt này chưa hỗ trợ phát âm tự động. Em có thể đọc phiên âm trong bài.");return;}
+ window.speechSynthesis.cancel();
+ const utterance = new SpeechSynthesisUtterance(text);
+ utterance.lang = "en-GB";
+ const voices = window.speechSynthesis.getVoices();
+ const ukVoice = voices.find(v => v.lang && v.lang.toLowerCase().startsWith("en-gb"));
+ if(ukVoice) utterance.voice = ukVoice;
+ utterance.rate = 0.86;
+ window.speechSynthesis.speak(utterance);
+}
+vocabulary.forEach((item,index)=>{
+ const button=document.createElement("button");
+ button.type="button";button.className="word-card";
+ button.setAttribute("aria-label","Khám phá hình "+(index+1)+": "+item.scene);
+ button.innerHTML=`<div class="art" aria-hidden="true">${item.icon}</div><strong>Hình ${index+1}</strong><small>Chạm để khám phá</small>`;
+ button.addEventListener("click",()=>{
+   reveal.innerHTML=`<h3>${item.word}</h3><p><strong>Phiên âm UK:</strong> ${item.ipa}</p><p><strong>Nghĩa:</strong> ${item.meaning}</p><p>${item.scene}</p><button class="action" type="button">🔊 Nghe phát âm</button>`;
+   reveal.querySelector("button").addEventListener("click",()=>speak(item.word));
+   reveal.scrollIntoView({behavior:"smooth",block:"nearest"});
+ });
+ cards.appendChild(button);
+});
+const quiz=document.getElementById("quiz");
+const score=document.getElementById("score");
+let answered=0,correctCount=0;
+function renderQuiz(){
+ answered=0;correctCount=0;quiz.innerHTML="";score.innerHTML="<strong>Kết quả:</strong> 0/5 câu";
+ vocabulary.forEach((item,index)=>{
+  const box=document.createElement("div");box.className="quiz-item";
+  const heading=document.createElement("h3");heading.textContent=`Câu ${index+1}. “${item.word}” có nghĩa là gì?`;box.appendChild(heading);
+  const options=document.createElement("div");options.className="options";
+  const feedback=document.createElement("p");feedback.className="feedback";feedback.setAttribute("aria-live","polite");
+  item.choices.forEach((choice,choiceIndex)=>{
+   const btn=document.createElement("button");btn.type="button";btn.className="option";btn.textContent=String.fromCharCode(65+choiceIndex)+". "+choice;
+   btn.addEventListener("click",()=>{
+    if(options.dataset.answered==="yes")return;
+    options.dataset.answered="yes";answered++;
+    const isCorrect=choiceIndex===item.correct;
+    if(isCorrect){correctCount++;btn.classList.add("correct");feedback.className="feedback good";feedback.textContent="✓ Chính xác! "+item.explain;}
+    else{btn.classList.add("wrong");options.children[item.correct].classList.add("correct");feedback.className="feedback bad";feedback.textContent="✗ Chưa chính xác. Đáp án đúng là “"+item.choices[item.correct]+"”. "+item.explain;}
+    [...options.children].forEach(b=>b.disabled=true);
+    score.innerHTML=`<strong>Kết quả:</strong> ${correctCount}/5 câu đúng · Đã trả lời ${answered}/5 câu`;
+   });
+   options.appendChild(btn);
+  });
+  box.append(options,feedback);quiz.appendChild(box);
+ });
+}
+renderQuiz();
+document.getElementById("resetQuiz").addEventListener("click",renderQuiz);
+const rows=document.getElementById("summaryRows");
+vocabulary.forEach(item=>{
+ const tr=document.createElement("tr");
+ tr.innerHTML=`<td><strong>${item.word}</strong></td><td>${item.ipa}</td><td>${item.meaning}</td><td><button class="action" type="button" aria-label="Nghe ${item.word}">🔊 Nghe</button></td>`;
+ tr.querySelector("button").addEventListener("click",()=>speak(item.word));
+ rows.appendChild(tr);
+});
+</script>
+</body>
+</html>
